@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Protegida</title>
+</head>
+<body>
+
+<h2>Bem-vindo à Página Protegida!</h2>
+
+<p>Esta página só pode ser acessada se você estiver autenticado.</p>
+
+<script src="auth.js"></script>
+<script>
+    if (!isLoggedIn()) {
+        window.location.replace("index.html");
+    }
+</script>
+</body>
+</html>

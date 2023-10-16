@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Registro</title>
+    <style>
+        #registerForm {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Login</h2>
+
+<form id="loginForm">
+    <label for="loginUsername">Nome de usuário:</label><br>
+    <input type="text" id="loginUsername" name="username" required><br><br>
+
+    <label for="loginPassword">Senha:</label><br>
+    <input type="password" id="loginPassword" name="password" required><br><br>
+
+    <input type="submit" value="Login">
+    <button type="button" id="showRegister">Registrar</button>
+</form>
+
+<h2>Registro</h2>
+
+<form id="registerForm">
+    <label for="registerUsername">Nome de usuário:</label><br>
+    <input type="text" id="registerUsername" name="username" required><br><br>
+
+    <label for="registerPassword">Senha:</label><br>
+    <input type="password" id="registerPassword" name="password" required><br><br>
+
+    <input type="submit" value="Registrar">
+    <button type="button" id="showLogin">Voltar para Login</button>
+</form>
+
+<script src="auth.js"></script>
+<script>
+    document.getElementById('showRegister').addEventListener('click', function() {
+        document.getElementById('loginForm').style.display = 'none';
+        document.getElementById('registerForm').style.display = 'block';
+    });
+
+    document.getElementById('showLogin').addEventListener('click', function() {
+        document.getElementById('loginForm').style.display = 'block';
+        document.getElementById('registerForm').style.display = 'none';
+    });
+</script>
+</body>
+</html>
